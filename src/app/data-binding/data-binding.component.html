@@ -1,4 +1,5 @@
 <section class="property-binding">
+  <!--
   <article>
     <h3>Interpolation</h3>
     <p>String renderizada com interpolação: {{ url }}</p>
@@ -10,5 +11,25 @@
   <article>
     <h3>Property bindings</h3>
       <img [src]="urlImagem">
+  </article>
+  -->
+
+  <article>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value=""></option>
+        <option value="success">success</option>
+        <option value="info">info</option>
+        <option value="warning">warning</option>
+        <option value="danger">danger</option>
+      </select>
+
+      <br>
+      <br>
+
+      <ngb-alert [type]="classe.value" [style.display]="classe.value ? 'inline' : 'none'">ace of spades</ngb-alert>
+    </div>
   </article>
 </section>
